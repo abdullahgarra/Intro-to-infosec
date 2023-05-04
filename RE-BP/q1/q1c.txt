@@ -1,0 +1,6 @@
+let data = {B0, B1, B2, B3 , ......., Bn}
+
+we modify B0 to be xor(B0,141) and then push 1 to the data. hence:
+new_data = {1, XOR(B1,141), B1, B2, ........, Bn}
+
+msgcheck will xor b1 and 141 an then stop.(because new_data[0] = 1) and compare the result to new_Data[1].

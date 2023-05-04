@@ -1,0 +1,7 @@
+By the look of Validate function we can see that the code iterates over the input byte-wise.
+the first (base)  byte contains the number of bytes we want to xor. let's say N
+The code xors N bytes starting from the third byte. (base+2)
+
+it then compares the result to the second byte (base+1)  and returns accordingly. (returns 1 if equal and 0 otherwise).
+
+ 

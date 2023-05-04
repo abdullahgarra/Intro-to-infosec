@@ -1,0 +1,6 @@
+we need to change the line in the assembly code where we check the condition and jump to the relevant section accordingly. (in order to print valid/invalid).
+
+we see a jnz instruction in this line, and hence changing it to jmp will jmp to the "valid" section regardless of the condition's status.
+
+with the help of ida we can identify which byte contains thei nstruction and change it by entering the opcode of 'jmp' (235).
+

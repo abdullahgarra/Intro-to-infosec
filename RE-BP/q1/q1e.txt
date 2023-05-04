@@ -1,0 +1,5 @@
+ consider  the sections  (valid/invalid).
+ We substitute the return value in eax in each section differently.
+ in valid we always return 0 but in invalid we return 1. therefore replacing the return value in invalid will do the job for us.
+
+(the return value sets in the second byte).

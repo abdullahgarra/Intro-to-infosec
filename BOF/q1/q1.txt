@@ -1,0 +1,8 @@
+
+Notincing a really small bug in the source code of sudo where the if condition checks the length of the password entered directly indicates the way we're gonna hack this.
+
+The main function checks if the length is larger than ten (looking at "check_password" function the number should be 9).
+since the buff has already 11 bytes written, concatinating a 10 byte string will vause a buffer overflow.
+The auth variable is defined right before buff and so it sits above it on the stack. hence, writing 10 bytes where the last byte is 1 will be enough to set auth to 1 and gain access.
+
+we pass [9,9,9,9,9,9,9,9,9,1] as password and overwrite auth to become 1.

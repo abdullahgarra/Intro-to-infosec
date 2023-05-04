@@ -1,0 +1,9 @@
+in the shellcode assembly file we used the"call trick" we've seen in the recitation in order to write a pointer to the command "/bin/sh" to the return address in order to run the shell.
+
+- instead of eax = 0x0b we wrote 0x1111111c so it does not hold any zero byte which will cause strcat to stop.
+- we wrote nulls to ecx and edx.
+
+
+using gdb I've noticed that the buffer starts at 0xbfffe029.
+and so in the python file i concatenated the shellcode + nops and overwrote the return address to be the beginning of the buffer and passed this as a password (taking advantage of the buffer overflow) .
+

@@ -1,0 +1,3 @@
+By the look of the code, we notice that in case the first byte (base) contains zero, the loop that xors the relevant bytes would not run.
+therefore, the result returns 1 iff the second byte equals 141.
+I use this observation in my code. I set the first byte to be 0 and the second one to be 141.

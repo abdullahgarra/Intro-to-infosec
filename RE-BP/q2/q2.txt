@@ -1,0 +1,10 @@
+We follow  the steps that appear in the assignment.
+
+the first two lines in patch2.asm is a jump to the original code since we dont want to get to the patched part unless we jump from the first dead zone.
+
+in patch1  we use the jmp instruction in order to jump back to the third line in patch2. we give it the absolute address of the third instruction in the big dead zone.
+
+once we're in the big dead zone it's game over. we check if the line starts with !# and act accordingly.
+
+
+ 

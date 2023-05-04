@@ -1,0 +1,4 @@
+we see that we can use a buffer overflow in order to overwrite the return address of the function and hence cause the program to crash after the return instruction in check password.
+
+we see also in ida that the last byte of the char written sets in EBP-3F which means it takes 3F bytes in hex to get to ebp. add another 4 + 1 to overwrite "ra" since it sets above ebp on the stack. we geet 3f+4+ 1 (hex) = 68 (decimal).
+we write 64 bytes of code containnig "a"'s and finish it with 4 "b"'s to recognize where does the ra saved .
