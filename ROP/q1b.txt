@@ -1,0 +1,9 @@
+using - print system while the code is running on an arbitrary input we could see that SYSTEM resides in 0xb7b4f040.
+
+using gdb similarly to what we've seen in the lecture (gdb -q --core=core)
+we could search for "bin/sh" in the data segment (which we found before starting the first question).
+
+following the fact that writing 136 bytes overwrote the first byte of ra in the first part of the question, writing the address of the system after inserting 135 a's will overwrite the retrurn addrress to be system.
+
+the first argument above system is system's return address so we add 4 a's.
+we write the address of /bin/sh that we found as the first argument for system	.

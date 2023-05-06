@@ -1,0 +1,5 @@
+decode_base64 decodes the encoded input with no bound checking and writes the decoded word to the buffer.
+
+therefore we can pass an encoded message long enough and to cause a seg fault overwriting the return address of check password function.
+
+with the help of gdb, when writing 136 bytes we overwrite the first byte in ra in get a segfault.

@@ -1,0 +1,29 @@
+I first overwrite the ra and the 4 bytes above to save the address of put to ebp.
+
+afterwards I write puts address, some 4 bytes : pop eax, the desired string address, a pointer to the beginning of the loop and only then a concatenate the string up on the stack.
+
+The whole procedure:
+
+first we save puts' address in ebp because at the beginning of puts we push it again.
+the address where ebp is pushed is exactly where our loop will point.
+
+so after we save puts' address to ebp we run puts for the first time since esp will point there. ( and from the fact that the gadget has a ret command that pushes what esp points to to eip).
+
+the argument is set exactly where we want it to be, and below it there is a pop instruction.
+
+what would happen after puts returns for the first time is as following:
+     1)the return address of puts is the gadget "pop eax" which will be executed after put finishes.
+     2) what this gadget will pop into eax is the string addr, this pop instruction is there in order to allow
+     	the esp to get to pop esp gadget pointer on the stack.
+     3) once esp gets to pop esp (and thank to ret in the gadget we ran), we will execute pop esp.
+     4) pop esp will increase the esp to point to our loop pointer addr saved on the stack. so esp will containt the address on the stack that holds puts' addr. therefore when we ret from this gadget we will "pop eip" when esp points to the segment on the stack that holds puts' addr.
+
+
+str bytes
+pointer to beggining of loop
+pop esp
+str addr
+pop eax
+puts' addr ( and beginning of loop)
+puts' addr
+pop ebp

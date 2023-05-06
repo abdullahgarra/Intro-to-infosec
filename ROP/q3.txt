@@ -1,0 +1,11 @@
+after a couple of attempts (and with the help of format function) we managed to find the magical instructions:
+
+the stack would look like this:
+
+mov [eax] , edx
+1
+pop edx add
+the add of auth
+pop eax add
+
+this way after ret in check password the pop eax (and then ret) will be executed, at that time the esp would be pointing to the address of auth. that way we save the address in eax. and similarly we save 1 in edx, update auth and boom!

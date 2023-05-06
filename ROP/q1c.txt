@@ -1,0 +1,1 @@
+we found exit's location and substitudet 0x42 in the byte above (/bin/sh) since exit's arguments should reside there.
