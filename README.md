@@ -1,4 +1,4 @@
-![image](https://github.com/abdullahgarra/intro-to-infosec/assets/101414656/6f314674-e654-43e1-8e6b-1179030a036d)![image](https://github.com/abdullahgarra/intro-to-infosec/assets/101414656/a5cd62a0-67bc-4ab1-ada4-4521844db193)
+![image](https://github.com/abdullahgarra/intro-to-infosec/assets/101414656/6f314674-e654-43e1-8e6b-1179030a036d)
 
 ## Course Topics
 - Networking: Explored network security concepts, including common vulnerabilities and attacks.
