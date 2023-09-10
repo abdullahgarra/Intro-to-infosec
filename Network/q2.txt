@@ -1,0 +1,8 @@
+when recieving a packet we check its raw data and make sure the packet refers to the course website. (similarly to the previous question)
+
+Our job is to return a response that cuases the redirection to instagram.
+We do this with returning a packet where we swap the destination and source addresses in the IP and TCP protocols, and the returning an ack of the same seq and update the sequence.
+
+we then send a packet back which contains RESPONSE as raw data and causing the redirection.
+
+*the redirection does not occur always and there as a race between the original respnse and ours.

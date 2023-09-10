@@ -1,0 +1,9 @@
+The login procedure calls "validate_login" on the cookie at some point and checks and acts according to the return value.
+Digging depper into "validate_login" function we notice that the function takes the cookie and performs:
+ base64.b64decode(cookie).decode()
+ and then checks if the result refers to a legit user name in the DB.
+ if we insert an encoding of "edward" as a cookie we can hack the system!
+
+thus we run:
+document.cookie = "login=ZWR3YXJk;" which allows direct modification to the cookies associated with the current document.
+which is the encoding of "edward" ("edward".encode())

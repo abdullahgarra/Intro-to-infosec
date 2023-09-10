@@ -1,0 +1,6 @@
+1. Open firefox
+2. In the address bar, type "about:config" (without the quotes) and click Enter
+3. Click OK on the big scary warning
+4. Search for `network.cookie.sameSite.laxByDefault` and set it to false
+5. Search for `network.cookie.sameSite.noneRequiresSecure` and set it to false (it might be false already, that is fine)
+

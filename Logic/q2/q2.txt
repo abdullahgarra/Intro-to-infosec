@@ -1,0 +1,5 @@
+Source: https://davidhamann.de/2020/04/05/exploiting-python-pickle/
+
+We conclude from the source that implementing __reduce__ in a class which instances we are going to pickle, we can give the pickling process a callable plus some arguments to run.
+
+The command we want to be loaded is echo hacked.

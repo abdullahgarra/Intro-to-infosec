@@ -1,0 +1,3 @@
+We notice that run.py uses eval(data) where data is the string representation of our dictionary.
+The catch is if the string was a bash command eval will execute it.
+That's why we return print(hacked)

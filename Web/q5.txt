@@ -1,0 +1,2 @@
+Slack-off's vulnerability to CSRF attacks arises from the absence of CSRF tokens, the only validation is on the cookies.
+we forge a request on behalf of users using AJAX POST with the apropriate requests while including the cookies with xhrFields.

@@ -1,0 +1,4 @@
+we notice that username_end and password_end are defined using "slicing
+". but if we insert a username and a password that are empty strings the if statement will look at two empty strings forcing the if statement to become true and returning true from validating script function.
+
+that's why our payload would be: "::echo hacked"

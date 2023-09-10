@@ -1,0 +1,3 @@
+we notice that in handle message function no name restrictions are being checked when the command is "join".
+join also creates a new channel which meanss if the name of the channel contained evil code, all users across the website will be affected by that code since the name of the channels appears in all pages of the forum.
+our evil code will contain a script that makes a post request of writing good morning in #general spam

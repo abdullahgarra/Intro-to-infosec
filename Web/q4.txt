@@ -1,0 +1,6 @@
+in model.py we notice that the SQL of /rename command does not happen securely (concatenates strings).
+that's why the idea of a message of this type of command (/rename)  arises.
+
+after we insert our input we get the following command:
+      UPDATE users SET full_name = Bob Marmite'; UPDATE users SET password = sha1('1234') WHERE username = 'bob' -- WHERE user_id = 'bob'
+which will update all users to have Bob's full name and then update bob's (and bob's only) password to 1234.

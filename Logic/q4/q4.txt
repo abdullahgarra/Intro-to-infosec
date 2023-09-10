@@ -1,0 +1,6 @@
+we notice that re.search (after reading the data) that Bob uses will return the first instance of command:...
+On the other hand json.load will turn our payload into a dictionary, and therefore if two keys are identical it will override the values attached to that key with the second value.
+
+if we set our payload to be: {command: echo hacked, signature:.., command: echo cool}
+what Alice would see is: {command: echo cool, signature:..}
+while Bob will execute echo hacked following the reasons mentioned above.

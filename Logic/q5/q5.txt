@@ -1,0 +1,25 @@
+
+The main vulnerability of run.py is that it runs too long and the file can change while its still rehashing.
+
+From q5.py we run both python script simultaniously. q5_1.py and run.py.
+
+procedure:
+	in q5.py we define the main as usual.
+	inside the Hack function we open a json
+	file (input.json)and insert the Legit
+	payload given in the example.
+
+	we then create 2 processes:
+	we run run.py and q5_1 simultaneously.
+	run.py takes the legit input and starts
+	working on it, hence starts rehashing.
+	
+	meanwhile q5_1 will take the legit
+	input, change it, wait for a sec!!
+	and then update the json file.
+	The validation function does not see
+	this update. On the other hand the execution
+	function sees this change but it's too late
+	and Bob and Alice are hacked.
+
+	

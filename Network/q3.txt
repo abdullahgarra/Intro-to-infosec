@@ -1,0 +1,8 @@
+A) in this function we check if the destination mac address equals the mac address of the gateway and the ip source is not us. this entails that another machine sent packet to the network gateway.
+
+B) we need to map the ip address of the gateway to our mac address. this is done with S.ARP where the hwsrc is our mac, psrc is the gateway ip (this creates the mapping). since we dont want to broadcast the result we send this to the victim.
+=> pdst is to be the victim's ip and hwdst is set to be the victim's mac.
+
+C) A stolen packet has the mac address of our machine but the ip address is not ours (oops). this is ude to the mapping we caused in B section.
+
+

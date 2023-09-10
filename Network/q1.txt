@@ -1,0 +1,8 @@
+after playing with spacy, we notice that the username and password appear in the raw section of the packet.
+
+we load the raw section into load after decoding it. we then use urlparse and extract the path in the url from it. using regular expressions we alswo extract the host.
+
+we dont want to throw an exception so we use a try except block.
+we then parse the data again with parse_qs which makes it easier to extract the username and the password after validating that the website and the host are alike.
+
+we print the username and password found.
